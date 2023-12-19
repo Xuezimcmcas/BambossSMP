@@ -1,0 +1,430 @@
+# This plugin has been created by Bosternike (Discord: Bosternike#7428).
+
+Defaults:
+  MAXIMUM_PLAYERS: 8
+  DIFFICULTY: NORMAL
+  JOIN_MESSAGE: '&fPlayer &6%player%&f has joined!'
+  QUIT_MESSAGE: '&fPlayer &6%player%&f has quit!'
+  DEATH_MESSAGE: '&fPlayer &c%player%&f died!'
+  DEATH_BY_PLAYER_MESSAGE: '&fPlayer &c%player%&f was slain by &4%killer%&f!'
+  WORLD_BORDER: 3000
+
+Command:
+  name: smp
+#  aliases:
+#  - anything
+
+Settings:
+  LobbyWorld: 'world'
+  LobbyWorldPrefix: '&6&lLobby'
+  ServerFullMessage:
+  - '&f'
+  - '&cThis server is full!'
+  - '&f'
+  DefaultBanReason: 'Just because I want'
+  DefaultKickReason: 'Just because I want'
+
+Commands:
+  Teleport:
+    name: teleport
+    aliases:
+    - tp
+  Vanish:
+    name: vanish
+    aliases:
+    - v
+  GameMode:
+    name: gamemode
+    aliases:
+    - gm
+  Fly:
+    name: fly
+    #aliases:
+    #- anything
+  FlySpeed:
+    name: flyspeed
+  WalkSpeed:
+    name: walkspeed
+  Heal:
+    name: heal
+  Feed:
+    name: feed
+  StaffChat:
+    name: staffchat
+    aliases:
+      - ac
+      - sc
+  Weather:
+    name: weather
+  Time:
+    name: time
+  Ban:
+    name: ban
+  Kick:
+    name: kick
+  Unban:
+    name: unban
+  Invite:
+    name: invite
+  Accept:
+    name: accept
+  TPA:
+    requestValidTime: 90 #in seconds
+    name: tpa
+  TPAccept:
+    name: tpaccept
+  TPADeny:
+    name: tpdeny
+  Difficulty:
+    name: difficulty
+  PvP:
+    name: pvp
+  Effect:
+    name: effect
+
+SMPListGUI:
+  Title: '&aAll the SMPs'
+  Size: 45
+  NextPageButton:
+    slot: 39
+    head: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg2MTg1YjFkNTE5YWRlNTg1ZjE4NGMzNGYzZjNlMjBiYjY0MWRlYjg3OWU4MTM3OGU0ZWFmMjA5Mjg3In19fQ=='
+    name: '&6Next page'
+    lore:
+    - ''
+    - '&aClick here to switch page!'
+  PreviousPageButton:
+    slot: 41
+    head: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQ3M2NmNjZkMzFiODNjZDhiODY0NGMxNTk1OGMxYjczYzhkOTczMjNiODAxMTcwYzFkODg2NGJiNmE4NDZkIn19fQ=='
+    name: '&6Previous page'
+    lore:
+    - ''
+    - '&aClick here to switch page!'
+  Slots:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 35
+  - 36
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+  - 44
+  Format:
+    NoLoreText: '&7This server has no description'
+    name: '&a%prefix%'
+    skull: '%player%'
+    NotLiked: '&7❤'
+    Liked: '&c&l❤'
+    lore:
+    - ''
+    - '&fLikes: &4%likes% %like_status%'
+    - '&fCurrent online &e%online%&7/&6%maximum%'
+    - ''
+    - '%lore%'
+    - ''
+    - '&7Left click - teleport'
+    - '&7Right click - like this server'
+
+IconsListGUI:
+  Title: '&aIcons N%page%'
+  Size: 45
+  NextPageButton:
+    slot: 39
+    head: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg2MTg1YjFkNTE5YWRlNTg1ZjE4NGMzNGYzZjNlMjBiYjY0MWRlYjg3OWU4MTM3OGU0ZWFmMjA5Mjg3In19fQ=='
+    name: '&6Next page'
+    lore:
+      - ''
+      - '&aClick here to switch page!'
+  PreviousPageButton:
+    slot: 41
+    head: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQ3M2NmNjZkMzFiODNjZDhiODY0NGMxNTk1OGMxYjczYzhkOTczMjNiODAxMTcwYzFkODg2NGJiNmE4NDZkIn19fQ=='
+    name: '&6Previous page'
+    lore:
+      - ''
+      - '&aClick here to switch page!'
+  Slots:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+  PremiumMaterials:
+    DIAMOND: 10
+    GOLD_INGOT: 5
+  FormatFree:
+    name: '&a%material%'
+    message: '&fYou have selected icon: &a%material%'
+    SelectSound: BLOCK_NOTE_BLOCK_CHIME:1
+    material: BARRIER # Can be anything, anyway in the GUI it'll be replaced (required field).
+    lore:
+    - ''
+    - '&7Click to select!'
+  FormatPremium:
+    name: '&d&n%material%'
+    material: BARRIER # Can be anything, anyway in the GUI it'll be replaced (required field).
+    enoughColor: '&e'
+    notEnoughColor: '&c'
+    denyMessage: "&cYou don't have enough money."
+    message: '&fYou have bought icon: &d&n%material%'
+    SelectSound: ENTITY_PLAYER_LEVELUP:1
+    DenySound: ENTITY_GHAST_SCREAM:2
+    lore:
+    - ''
+    - '&fPrice: %color%%price%'
+    - ''
+    - '&bClick to purchase!'
+  FormatPremiumAvailable:
+    name: '&d&n%material%'
+    material: BARRIER # Can be anything, anyway in the GUI it'll be replaced (required field).
+    message: '&fYou have selected icon: &d&n%material%'
+    SelectSound: BLOCK_NOTE_BLOCK_CHIME:1
+    lore:
+    - ''
+    - '&eClick to select!'
+
+Messages:
+  noPermission: "&cYou don't have permission to do this."
+  notValidNumber: '&c%arg%&f is not a valid number!'
+  liked: '&aYou liked server %server%&a!'
+  alreadyLiked: '&cYou have already liked this server!'
+  help:
+  - '&f'
+  - '&f Create SMP - &b/smp create'
+  - '&f Teleport to your SMP &7- &b/smp tp'
+  - '&f Settings - &b/smp settings'
+  - '&f All SMPs &7- &d/smp view'
+  - '&f Delete SMP - &b/smp delete'
+  - '&f'
+  noSMP: "&cYou don't have an SMP."
+  create:
+    already: '&cYou already have an SMP.'
+    creating: '&aCreating your SMP...'
+    title: '&aCreating your SMP...'
+    created: '&aYour SMP has been created!'
+  teleporting: '&aTeleporting you to your SMP...'
+  delete:
+    deleting: '&cDeleting your SMP...'
+    deleted: '&cYour SMP has been deleted!'
+  op:
+    usage: '&fUsage &7- &d/smp op [player]'
+    already: '&fPlayer &c%name%&f is already an operator.'
+    success: '&a%player%&f was made an operator!'
+  deop:
+    usage: '&fUsage &7- &d/smp deop [player]'
+    notAnOP: '&fPlayer &c%name%&f is not an operator.'
+    success: '&a%player%&f is no longer an operator!'
+  setSpawn: '&aSpawn has been set for this world!'
+  # COMMANDS
+  # ADMIN COMMANDS AND JUST PLAYER COMMANDS
+  # Permission for all commands: modcommands.command.*
+  nullPlayer: '&fPlayer &c%name%&f is not online.'
+  notNumber: '&c%arg%&f is not a number.'
+  illegalSpeed: '&fSpeed value must be between &a0 and 10&f. Input speed: &c%arg%&f.'
+  # Permission: modcommands.command.teleport
+  teleport:
+    usage: '&fUsage &7- &d/tp [player] &7(optional: &9[target]&7)'
+    success: '&fYou have been teleported to &a%player%&f!'
+    others: '&fPlayer &a%player%&f has been teleported to &6%target%&f!'
+  # Permission: modcommands.command.vanish
+  vanish:
+    selfOn: '&aVanish has been enabled!'
+    selfOff: '&cVanish has been disabled!'
+    othersOn: '&fVanish has been enabled for &a%player%&f!'
+    othersOff: '&fVanish has been disabled for &c%player%&f!'
+  # Permission: modcommands.command.gamemode
+  gameMode:
+    usage: '&fUsage &7- &d/gm [mode] &7(optional: &9[player]&7)'
+    SURVIVAL: '&cSurvival'
+    ADVENTURE: '&6Adventure'
+    CREATIVE: '&aCreative'
+    SPECTATOR: '&eSpectator'
+    noSuchGameMode: '&fGameMode &c%arg%&f could not be found.'
+    success: '&fGameMode changed to %mode%&f!'
+    others: '&fGameMode changed to %mode%&f for player &6%target%&f!'
+  # Permission: modcommands.command.fly
+  fly:
+    selfOn: '&aFly mode enabled!'
+    selfOff: '&cFly mode disabled!'
+    othersOn: '&fFly mode enabled for &a%player%&f!'
+    othersOff: '&fFly mode disabled for &c%player%&f!'
+  # Permission: modcommands.command.flyspeed
+  flySpeed:
+    usage: '&fUsage &7- &d/flyspeed [speed] &7(optional: &9[player]&7)'
+    success: '&fNow your fly speed is &a%speed%&f!'
+    others: "&fNow &6%target%&f's fly speed is &a%speed%&f!"
+  # Permission: modcommands.command.walkspeed
+  walkSpeed:
+    usage: '&fUsage &7- &d/walkspeed [speed] &7(optional: &9[player&7)'
+    success: '&fNow your walk speed is &a%speed%&f!'
+    others: "&fNow &6%target%&f's walk speed is &a%speed%&f!"
+  # Permission: modcommands.command.heal
+  heal:
+    success: '&aHealed!'
+    others: '&fPlayer &a%player%&f healed!'
+  # Permission: modcommands.command.feed
+  feed:
+    success: '&aHunger satisfied!'
+    others: '&fPlayer &a%player%&f has been fed!'
+  # Permission: modcommands.command.staffchat
+  staffChat:
+    usage: '&fUsage &7- &d/staffchat [message]'
+    format: '&b&l[STAFF] &7>> &e%sender%&f: &a%message%'
+  weather:
+    usage: '&fUsage &7- &d/weather &7[&esun&7/&9rain&7]'
+    invalidArg: '&fInvalid argument: &c%arg%'
+    Clear: '&eSunny'
+    Storm: '&9Storm'
+    success: '&fWeather has been set to %weather%&f!'
+  time:
+    usage: '&fUsage &7- &d/time &7[&eday&7/&9night&9]'
+    invalidArg: '&fInvalid argument: &c%arg%'
+    Day: '&eDay'
+    Night: '&9Night'
+    success: '&fTime has been set to %time%&f!'
+  kick:
+    usage: '&fUsage &7- &d/kick [player] <reason>'
+    success: '&fPlayer &c%player%&f was kicked for&7: &f%reason%'
+    playerKicked:
+    - '&7You have been kicked!'
+    - '&7Server: &f%prefix%'
+    - '&7Admin: &c%player%'
+    - '&7Reason: &c%reason%'
+  ban:
+    usage: '&fUsage &7- &d/ban [player] <reason>'
+    success: '&fPlayer &c%player%&f was banned for&7: &f%reason%'
+    playerBanned:
+    - '&7You have been banned!'
+    - '&7Server: &f%prefix%'
+    - '&7Admin: &c%player%'
+    - '&7Reason: &c%reason%'
+  unban:
+    usage: '&fUsage &7- &d/unban [player]'
+    notBanned: '&fPlayer &c%name%&f is not banned.'
+    success: '&fPlayer &a%player%&f was unbanned!'
+  invite:
+    usage: '&fUsage &7- &d/invite [player]'
+    already: '&fPlayer &c%name%&f has already been invited to you SMP.'
+    success: '&fPlayer &a%player%&f has been invited!'
+    receive:
+    - "&fYou were invited to &a%player%'s SMP!"
+    - 'RUN_COMMAND;&a/accept %player% &7- &fTo accept &7(click);&7Click to accept;/accept %player%'
+  accept:
+    usage: '&fUsage &7- &d/accept [player]'
+    noInvites: "&cYou haven't been invited to this SMP."
+    success: '&aInvite has been accepted!'
+  tpa:
+    usage: '&fUsage &7- &d/tpa [player]'
+    invalidArg: '&fPlayer &c%arg%&f not found.'
+    already: '&fYou have already requested teleport to this player.'
+    success: '&fTeleport has been requested to &a%name%&f!'
+    receive:
+    - '&fPlayer &6%player%&f requested teleportation!'
+    - 'RUN_COMMAND;&a/tpaccept %player% &7- &fTo accept &7(click);&7Click to accept;/tpaccept %player%'
+  tpaccept:
+    usage: '&fUsage &7- &d/tpaccept [player]'
+    invalidArg: '&fPlayer &c%arg%&f not found.'
+    noRequests: "&fYou don't have any requests from this player."
+    success: '&aRequest has been accepted!'
+    requester: '&fPlayer &a%player%&f has just accepted your teleport request!'
+  tpadeny:
+    usage: '&fUsage &7- &d/tpadeny [player]'
+    invalidArg: '&fPlayer &c%arg%&f not found.'
+    noRequests: "&fYou don't have any requests from this player."
+    success: '&cRequest has been denied!'
+    requester: '&fPlayer &c%player%&f has just denied your teleport request!'
+  difficulty:
+    usage: '&fUsage &7- &d/difficulty [peaceful&7/&deasy&7/&dnormal&7/&dhard]'
+    invalidArg: '&fNo such difficulty &c%arg%&f.'
+    PEACEFUL: '&apeaceful'
+    EASY: '&beasy'
+    NORMAL: '&6NORMAL'
+    HARD: '&cHARD'
+    success: '&fDifficulty has been set to %arg%&f!'
+  pvp:
+    enabled: '&aPvP has been enabled!'
+    disabled: '&cPvP has been disabled!'
+  effect:
+    usage: '&fUsage &7- &d/effect [player] [effect] [level] [time]'
+    noEffect: '&fEffect &c%arg%&f could not be found.'
+    success: '&fEffect &a%effect%&f has been applied to player &6%player%&f!'
+
+
+
+
+

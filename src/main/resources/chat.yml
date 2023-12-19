@@ -1,0 +1,192 @@
+# PLACEHOLDERS:
+#
+# ANY PLACEHOLDERAPI PLACEHOLDER.
+#
+# Player display name - %display_name%
+# Player name - %name%
+# Player balance - %balance%
+# Player world - %world%
+# Health - %health%
+# Food - %food%
+# Experience - %exp%
+# Level - %level%
+#
+# (SimpleClans) Clan - %clan%
+#
+# Town (Towny) - %towny_town%
+# Nation (Towny) - %towny_nation%
+#
+# Prefix - %prefix%
+# Suffix - %suffix%
+#
+# MESSAGE - %message%
+# COLORED MESSAGE - %colored_message%
+
+# CLICK ACTIONS: OPEN_URL, OPEN_FILE, RUN_COMMAND, SUGGEST_COMMAND, CHANGE_PAGE, COPY_TO_CLIPBOARD
+
+# ALL FOLLOWING FEATURES ARE APPLICABLE FOR ANY CHATS!
+# YOU CAN ALSO CREATE ANY CHAT AND NAME IT AS YOU WANT!
+Log:
+  Enabled: true
+  Format: '[SMP] [%date%] [%chat%] %player%: %message%'
+# If this feature is enabled, when player sends a message it will be also sent to console.
+# Set to "false" or remove this to disable.
+LogToConsole: true
+# Requirement for using Message pattern (config option ChatColor).
+MessagePatterPermissionRequirement:
+  Enabled: false
+  Permission: 'boster.chat.message.pattern.local'
+# Allows player to tag another player.
+# Example: @BosterDev
+# Another example: my message blah blah blah @BosterDev
+TagFeature:
+  Symbol: '@'
+  OnlinePlayerColor: '&a'
+  OfflinePlayerColor: '&c'
+  SymbolStringOnline: '&b@'
+  SymbolStringOffline: '&6@'
+  # Remove this to allow by default.
+  Permission: 'boster.chat.tag.use'
+rows:
+  # You can name rows as you want.
+  # 1 row = one message in chat.
+  1:
+    component1:
+      text: '&d&lL &8&l|&f '
+    component2:
+      text: '%prefix%'
+      hover:
+        - '&fClick here to open our store'
+      action:
+        type: OPEN_URL
+        string: 'https://store.yourwebsite.net'
+    component3:
+      options:
+        requiredNonEmptyComponents:
+          - 'component2'
+      text: ' '
+    component4:
+      text: '%display_name%'
+      hover:
+        - 'Click here to message this player'
+      action:
+        type: SUGGEST_COMMAND
+        string: '/msg %name% '
+    component5:
+      text: '&7: '
+    component6:
+      text: '%rank_color%%message%'
+      hover:
+        - 'Click here to message this player'
+      action:
+        type: SUGGEST_COMMAND
+        string: '/msg %name% '
+Settings:
+  # All following settings can be configured in chat settings.
+  # End messages with dot?
+  DotInsertion:
+    Enabled: true
+    PermissionRequirement:
+      Enabled: true
+      Permission: 'boster.chat.dot'
+  # Should the first character of message be capital?
+  CapitalizeMessage:
+    Enabled: true
+    PermissionRequirement:
+      Enabled: true
+      Permission: 'boster.chat.capitalize'
+  # Should player be able to use color code (like &)?
+  ColorizeMessage:
+    Enabled: true
+    PermissionRequirement:
+      Enabled: true
+      Permission: 'boster.chat.color'
+  # Check for messages similarity.
+  CheckSimilarity:
+    Enabled: true
+    # Similarity in percents.
+    # If messages similarity >= 95%, message will be rejected.
+    Similarity: 95
+    Message:
+      - '&cYour messages are too similar.'
+  # Check for exact words.
+  DeniedWords:
+    # Permission to override this check.
+    OverridePermission:
+      Enabled: false
+      Permission: 'boster.chat.denied.words.override'
+    Enabled: true
+    list:
+      - 'fuck'
+    Result:
+      # It will replace each character of the word with the following symbol.
+      replaceChars: '*'
+  # Check if message contains any of the following list.
+  DeniedContents:
+    # Permission to override this check.
+    OverridePermission:
+      Enabled: false
+      Permission: 'boster.chat.denied.contents.override'
+    Enabled: true
+    list:
+      - 'fuckx'
+    Result:
+      message:
+        - "&cSuch contents as '%content%' are disallowed."
+  DenyAddress:
+    Enabled: true
+    # Permission to override this check.
+    OverridePermission:
+      Enabled: false
+      Permission: 'boster.chat.deny.address.override'
+    Result:
+      # It will replace the whole IP with the following word.
+      # WARNING: Result "replaceChars" IS NOT SUPPORTED!
+      replace: 'your.server.net'
+# Remove this section to remove cooldown.
+# Here is an instance of how you can make a cooldown.
+Cooldown:
+  # If player has permission declared below, he will be overriding cooldown.
+  # Remove this field to disable this feature.
+  SkipPermission: 'boster.chat.cooldown.skip.default'
+  Time:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 5
+  Format:
+    second: 'second'
+    some_seconds: 'seconds'
+    seconds: 'seconds'
+    minute: 'minute'
+    some_minutes: 'minutes'
+    minutes: 'minutes'
+    hour: 'hour'
+    some_hours: 'hours'
+    hours: 'hours'
+    day: 'day'
+    some_days: 'days'
+    days: 'days'
+  Messages:
+    Message:
+      Enabled: true
+      text: '&dBosterChat &8| &fWait &6%time%&f before using it again.'
+    Title:
+      Enabled: false
+      text: '&fCooldown!'
+    SubTitle:
+      Enabled: false
+      text: '&dBosterChat &8| &fWait &6%time%&f before using it again.'
+    Actionbar:
+      Enabled: true
+      text: '&dBosterChat &8| &fWait &6%time%&f before using it again.'
+Replaces:
+  thx: 'thanks'
+  ':D': 'ツ'
+  java: '♨'
+RankColors:
+  # Default color. If player rank wasn't found or no matches with the following list, will return "default" string.
+  default: '&f'
+  YT: '&c'
+  MVP: '&b'
+  VIP: '&a'

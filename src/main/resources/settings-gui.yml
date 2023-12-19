@@ -1,0 +1,231 @@
+ServerSetupGUI:
+  Title: 'SMP Server setup'
+  Size: 36
+  GameRules:
+    slot: 11
+    material: DIAMOND
+    enchants:
+    - LUCK:1
+    flags:
+    - HIDE_ENCHANTS
+    name: '&aServer setup'
+    lore:
+    - '&eEdit server settings'
+  Settings:
+    slot: 15
+    material: GOLD_INGOT
+    enchants:
+    - LUCK:1
+    flags:
+    - HIDE_ENCHANTS
+    name: '&aGameRule setup'
+    lore:
+    - ''
+    - '&eEdit server game rules'
+  Close:
+    slot: 31
+    material: BARRIER
+    enchants:
+    - LUCK:1
+    flags:
+    - HIDE_ENCHANTS
+    name: '&cClose'
+
+GameRulesGUI:
+  Title: '&6Settings'
+  EmptyTextField: '&cnone'
+  GameRuleItems:
+    AnnounceAdvancements:
+      rule: announceAdvancements
+      slot: 0
+      enabled:
+        name: '&aAnnounce advancements'
+        material: LIME_DYE
+        lore:
+          - ''
+          - '&7Click to disable.'
+      disabled:
+        name: '&cAnnounce advancements'
+        material: RED_DYE
+        lore:
+          - ''
+          - '&fClick to enable.'
+
+SettingsGUI:
+  Title: '&6Settings'
+  Size: 45
+  EmptyTextField: '&cnone'
+  IconSelectionButton:
+    skull: '%player%'
+    slot: 9
+    name: '&dClick to select icon'
+    lore:
+      - ''
+      - '&7Click to change!'
+  GameModeSelector:
+    slot: 0
+    SURVIVAL:
+      material: PAPER
+      name: '&fGame mode'
+      lore:
+      - ''
+      - '&fCurrent: &6Survival'
+      - ''
+      - '&aClick to set to creative'
+    CREATIVE:
+      material: PAPER
+      name: '&fGame mode'
+      lore:
+      - ''
+      - '&fCurrent: &6Creative'
+      - ''
+      - '&aClick to set to adventure'
+    ADVENTURE:
+      material: PAPER
+      name: '&fGame mode'
+      lore:
+      - ''
+      - '&fCurrent: &6Adventure'
+      - ''
+      - '&aClick to set to spectator'
+    SPECTATOR:
+      material: PAPER
+      name: '&fGame mode'
+      lore:
+      - ''
+      - '&fCurrent: &6Spectator'
+      - ''
+      - '&aClick to set to survival'
+  Texts:
+    JoinMessage:
+      hint: '&a&lType in chat the new message!'
+      field: joinMessage
+      material: NAME_TAG
+      slot: 1
+      name: '&bJoin message'
+      lore:
+        - ''
+        - '&fCurrent: %text%'
+        - '&fPlaceholders: &6%player%'
+        - ''
+        - '&7Click to change!'
+    QuitMessage:
+      hint: '&a&lType in chat the new message!'
+      field: quitMessage
+      material: NAME_TAG
+      slot: 2
+      name: '&bQuit message'
+      lore:
+        - ''
+        - '&fCurrent: %text%'
+        - '&fPlaceholders: &6%player%'
+        - ''
+        - '&7Click to change!'
+    DeathMessage:
+      hint: '&a&lType in chat the new message!'
+      field: deathMessage
+      material: NAME_TAG
+      slot: 3
+      name: '&bDeath message'
+      lore:
+        - ''
+        - '&fCurrent: %text%'
+        - '&fPlaceholders: &6%player%'
+        - ''
+        - '&7Click to change!'
+    DeathByPlayerMessage:
+      hint: '&a&lType in chat the new message!'
+      field: deathByPlayerMessage
+      material: NAME_TAG
+      slot: 4
+      name: '&bDeath message'
+      lore:
+        - ''
+        - '&fCurrent: %text%'
+        - '&fPlaceholders: &6%player%&7, &6%killer%'
+        - ''
+        - '&7Click to change!'
+    Prefix:
+      hint: '&a&lType in chat the new prefix!'
+      field: prefix
+      material: NAME_TAG
+      slot: 5
+      name: '&bServer prefix'
+      lore:
+        - ''
+        - '&fCurrent: %text%'
+        - ''
+        - '&7Click to change!'
+  Booleans:
+    WeatherLocked:
+      field: weatherLocked
+      slot: 6
+      enabled:
+        name: '&aWeather unlocked'
+        material: LIME_DYE
+        lore:
+          - ''
+          - '&7Click to lock.'
+      disabled:
+        name: '&cWeather locked'
+        material: RED_DYE
+        lore:
+          - ''
+          - '&fClick to unlock.'
+    PrivateOrPublic:
+      field: accessible
+      slot: 7
+      enabled:
+        name: '&aPublic'
+        material: LIME_DYE
+        lore:
+          - ''
+          - '&7Click to make private.'
+      disabled:
+        name: '&cPrivate'
+        material: RED_DYE
+        lore:
+          - ''
+          - '&fClick to make public.'
+  Numbers:
+    # Types:
+    # Integer - 1
+    # Double - 2
+    # Long - 3
+    # Float - 4
+    MaxPlayers:
+      hint: '&a&lType in chat the new numeral value!'
+      permission: 'bamboss.smp.limit'
+      permissionAlert: "&cYou don't have permission to change the limit of player."
+      field: maxPlayers
+      slot: 8
+      material: BEDROCK
+      name: '&bMaximum players'
+      lore:
+        - ''
+        - '&fCurrent: %value%'
+        - ''
+        - '&7Click to change!'
+  ListsString:
+    Lore:
+      hint: '&aType message by message! To cancel: &c/cancel&a. When done: &b/done'
+      limit: 5 # Set to -1 or remove to disable the limit.
+      limitMessage: '&cYou have reached the limit of &65&c!'
+      field: lore
+      slot: 10
+      material: NAME_TAG
+      name: '&dLore'
+      lore:
+        - ''
+        - '&fCurrent lore:'
+        - '%list%'
+        - ''
+        - '&7Click to change!'
+#  Items:
+#    glass:
+#      name: '&f '
+#      material: BLACK_STAINED_GLASS_PANE
+#      slots:
+#      - 0
+#      - 1
+#      - 2
